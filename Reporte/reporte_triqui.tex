@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -15,15 +16,25 @@
 
 \section{Introducción}
 
-La automatización de juegos cuya resolución requiere algún grado de inteligencia fue una tarea muy relevante durante las primeras etapas de la inteligencia articial. Los juegos constituyen un muy buen conejillo de indias, toda vez que definen un entorno completamente regimentado y relativamente sencillo, fácilmente susceptible a la formalización. El juego del triqui (o tres-en-línea) es un ejemplar muy favorable a este respecto, sobre todo para la representación formal, y más bien sencilla, de un \emph{task environment} (REFERENCIA RUSSELL \& NORVIG SEC???), así como para ilustrar la metodología de búsqueda de soluciones en un espacio de estados.
+\noindent La automatización de juegos cuya resolución requiere algún grado de inteligencia fue una tarea muy relevante durante las primeras etapas de la inteligencia articial. Los juegos constituyen un muy buen conejillo de indias, toda vez que definen un entorno completamente regimentado y relativamente sencillo, fácilmente susceptible a la formalización. El juego del triqui (o tres-en-línea) es un ejemplar muy favorable a este respecto, sobre todo para la representación formal, y más bien sencilla, de un \emph{task environment} (REFERENCIA RUSSELL \& NORVIG SEC???), así como para ilustrar la metodología de búsqueda de soluciones en un espacio de estados.
 
-El juego del triqui involucra dos jugadores, quienes hacen sus jugadas por turnos en un tablero de $3\times 3$. El primer jugador arranca poniendo $X$ en alguna casilla, luego el segundo pone una $O$ en alguna de las casillas vacías, luego vuelve el turno para el jugador 1 y así en adelante. El juego termina cuando no hay más casillas vacías o cuando alguno de los dos jugadores logra poner tres de sus figuras en línea (ver figura ??).
+El juego del triqui involucra dos jugadores, quienes hacen sus jugadas por turnos en un tablero de $3\times 3$. El primer jugador arranca poniendo $X$ en alguna casilla, luego el segundo pone una $O$ en alguna de las casillas vacías, luego vuelve el turno para el jugador 1 y así en adelante. El juego termina cuando no hay más casillas vacías o cuando alguno de los dos jugadores logra poner tres de sus figuras en línea (ver Figura \ref{fig:triqui}).
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.2]{imagenes/triqui1}\hspace{.5cm}
+\includegraphics[scale=.2]{imagenes/triqui2}\hspace{.5cm}
+\includegraphics[scale=.2]{imagenes/triqui3}\hspace{.5cm}
+\includegraphics[scale=.2]{imagenes/triqui4}\hspace{.5cm}
+\end{center}
+\caption{Cuatro maneras de ganar el juego del triqui con las $X$. La victoria con las $O$ es similar.}\label{fig:triqui}
+\end{figure}
 
 Nuestro problema consiste en implementar un agente que sea competente para jugar al triqui. Este problema admite una solución completa, toda vez que el agente que implementamos nunca podrá ser derrotado. 
 
 \section{Métodos}
 
-La solución al problema requiere una definición formal previa a la implementación en python, que es la siguiente:
+\noindent La solución al problema requiere una definición formal previa a la implementación en python, que es la siguiente:
 
 \begin{description}
 \item[Estado inicial:] Situación del entorno desde el cual comienza el juego. En el caso del triqui, el estado inicial es el tablero vacío.
@@ -34,7 +45,21 @@ La solución al problema requiere una definición formal previa a la implementac
 \item[Función de utilidad($s$):] Definida sólo cuando el juego se termina en el estado s y especifica la recompensa de cada jugador en s. En el caso del triqui, asumiremos que el ganador obtiene 1, el perdedor 0 y, en caso de empate, ambos jugadores obtienen $\frac{1}{2}$.
 \end{description}
 
+Una vez implementado el problema así definido, se procedió a implementar la función \texttt{minmax-decision} (ver Figura \ref{fig:minmax}), la cual implementa el algoritmo minmax (REFERENCIA A R-Y-N, SEC???). Este algoritmo crea un árbol de estados, partiendo desde un estado dado $s$, atribuyéndole una utilidad a cada estado con base en los pagos generados por una condición final (ver función de utilidad arriba descrita). Los pagos para el jugador 1 con las $X$ son positivos, y los del jugador 2 con las $O$ son negativos, así que el primero buscará estados que maximicen la utilidad, mientras que el segundo buscará estados que la minimicen. Estas funciones definen el back-end de la aplicación.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=.5]{imagenes/busqueda-minmax}
+\end{center}
+\caption{Pseudo-código de las funciones que implementan la toma de decisiones del algoritmo minmax.}\label{fig:minmax}
+\end{figure}
+
+Como front-end, se impementó una página web usando la librería Dash de python, y fue desplegada en un servidor \textsc{ec2} en \textsc{aws}.
+
 \section{Resultados}
+
+
+POR QUÉ ESTE AGENTE NO PUEDE SER DERROTADO???
 
 \section{Discusión}
 
