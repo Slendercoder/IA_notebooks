@@ -5,6 +5,8 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[all]{xy}
 
 \title{Automatizando el juego del triqui\\ Reporte del primer problema del curso\\ ``IA: Representación y solución de problemas''}
 \author{Edgar Andrade}
@@ -57,6 +59,27 @@ Una vez implementado el problema así definido, se procedió a implementar la fu
 Como front-end, se impementó una página web usando la librería Dash de python, y fue desplegada en un servidor \textsc{ec2} en \textsc{aws}.
 
 \section{Resultados}
+
+\noindent\hspace{-1cm}\scalebox{0.9}{
+\begin{tikzpicture}[level distance=2.5cm, level 1/.style={sibling distance=5cm}, level 2/.style={sibling distance=4cm}]
+\node{\txt{\includegraphics[scale=.2]{imagenes/tab122}\\ Valor minmax = 0\\ = max$\{-1, -1, 0\}$}}
+    child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab1222}\\ Valor minmax = $-1$\\ = min$\{-1, 0, 0\}$}} 
+			child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab12221}\\ Utilidad = $-1$}} }
+		    	child { node {$\vdots$} }
+    			child { node {$\vdots$} }
+    		}
+    	child { node {$\vdots$} }
+    child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab1221}\\ Valor minmax = 0\\ = min$\{0, 1\}$}}
+			child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab12211}\\ Valor minmax = 0\\ = max$\{0\}$}} 
+					child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab122111}\\ Utilidad = 0}} }
+				}
+			child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab12212}\\ Valor minmax = 1\\ = max$\{1\}$} } 
+					child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab122121}\\ Utilidad = 1}} }
+				}
+		}
+	;
+\end{tikzpicture}
+} % end scalebox
 
 
 POR QUÉ ESTE AGENTE NO PUEDE SER DERROTADO???
