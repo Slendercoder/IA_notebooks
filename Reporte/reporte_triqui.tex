@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage[all]{xy}
+\usepackage[numbers]{natbib}
 
 \title{Automatizando el juego del triqui\\ Reporte del primer problema del curso\\ ``IA: Representación y solución de problemas''}
 \author{Edgar Andrade}
@@ -18,7 +19,7 @@
 
 \section{Introducción}
 
-\noindent La automatización de juegos cuya resolución requiere algún grado de inteligencia fue una tarea muy relevante durante las primeras etapas de la inteligencia articial. Los juegos constituyen un muy buen conejillo de indias, toda vez que definen un entorno completamente regimentado y relativamente sencillo, fácilmente susceptible a la formalización. El juego del triqui (o tres-en-línea) es un ejemplar muy favorable a este respecto, sobre todo para la representación formal, y más bien sencilla, de un \emph{task environment} (REFERENCIA RUSSELL \& NORVIG SEC???), así como para ilustrar la metodología de búsqueda de soluciones en un espacio de estados.
+\noindent La automatización de juegos cuya resolución requiere algún grado de inteligencia fue una tarea muy relevante durante las primeras etapas de la inteligencia articial. Los juegos constituyen un muy buen conejillo de indias, toda vez que definen un entorno completamente regimentado y relativamente sencillo, fácilmente susceptible a la formalización. El juego del triqui (o tres-en-línea) es un ejemplar muy favorable a este respecto, sobre todo para la representación formal, y más bien sencilla, de un \emph{task environment} \cite[\S 3.1]{r_y_n2016}, así como para ilustrar la metodología de búsqueda de soluciones en un espacio de estados.
 
 El juego del triqui involucra dos jugadores, quienes hacen sus jugadas por turnos en un tablero de $3\times 3$. El primer jugador arranca poniendo $X$ en alguna casilla, luego el segundo pone una $O$ en alguna de las casillas vacías, luego vuelve el turno para el jugador 1 y así en adelante. El juego termina cuando no hay más casillas vacías o cuando alguno de los dos jugadores logra poner tres de sus figuras en línea (ver Figura \ref{fig:triqui}).
 
@@ -44,23 +45,23 @@ Nuestro problema consiste en implementar un agente que sea competente para jugar
 \item[Posibles acciones($s$):] Descripción de las posibles acciones del $Jugador(s)$, dado un estado $s$. En este caso, poner o bien una $O$ o una $X$ en una casilla vacía.
 \item[Función de transiciones($s$, $a$):] Descripción del entorno que resulta de la ejecución de la acción $a$ por el $Jugador(s)$ en el estado $s$. Junto con el estado inicial y las posibles acciones, la función de transiciones define el espacio de estados del juego.
 \item[Prueba de objetivo($s$):] Permite determinar si el juego se termina cuando se obtiene el estado $s$.
-\item[Función de utilidad($s$):] Definida sólo cuando el juego se termina en el estado s y especifica la recompensa de cada jugador en s. En el caso del triqui, asumiremos que el ganador obtiene 1, el perdedor 0 y, en caso de empate, ambos jugadores obtienen $\frac{1}{2}$.
+\item[Función de utilidad($s$):] Definida sólo cuando el juego se termina en el estado s y especifica la utilidad asociada al estado $s$. En el caso del triqui, asumiremos que si  el ganador son las $X$, la utilidad es 1; si el ganador son las $O$, la utilidad es $-1$; en caso de empate, la utilidad es 0.
 \end{description}
 
-Una vez implementado el problema así definido, se procedió a implementar la función \texttt{minmax-decision} (ver Figura \ref{fig:minmax}), la cual implementa el algoritmo minmax (REFERENCIA A R-Y-N, SEC???). Este algoritmo crea un árbol de estados, partiendo desde un estado dado $s$, atribuyéndole una utilidad a cada estado con base en los pagos generados por una condición final (ver función de utilidad arriba descrita). Los pagos para el jugador 1 con las $X$ son positivos, y los del jugador 2 con las $O$ son negativos, así que el primero buscará estados que maximicen la utilidad, mientras que el segundo buscará estados que la minimicen. Estas funciones definen el back-end de la aplicación.
+Una vez implementado el problema así definido, se procedió a implementar el algoritmo \texttt{minmax} mediante la función \texttt{minmax-decision} (ver Figura \ref{fig:minmax}; \citealt[\S 5.2]{r_y_n2016}). Este algoritmo crea un árbol de estados, partiendo desde un estado dado $s$, atribuyéndole un valor \texttt{minmax} a cada estado con base en la función de utilidad arriba descrita. Los pagos para el jugador con las $X$ son positivos, y los del jugador 2 con las $O$ son negativos, así que el primero buscará estados que maximicen la utilidad, mientras que el segundo buscará estados que la minimicen (ver Figura \ref{fig:arbol_minmax}). Estas funciones definen el back-end de la aplicación.
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=.5]{imagenes/busqueda-minmax}
+\includegraphics[scale=.4]{imagenes/busqueda-minmax}
 \end{center}
 \caption{Pseudo-código de las funciones que implementan la toma de decisiones del algoritmo minmax.}\label{fig:minmax}
 \end{figure}
 
 Como front-end, se impementó una página web usando la librería Dash de python, y fue desplegada en un servidor \textsc{ec2} en \textsc{aws}.
 
-\section{Resultados}
-
-\noindent\hspace{-1cm}\scalebox{0.9}{
+\begin{figure}
+\begin{center}
+\noindent\hspace{-1cm}\scalebox{0.6}{
 \begin{tikzpicture}[level distance=2.5cm, level 1/.style={sibling distance=5cm}, level 2/.style={sibling distance=4cm}]
 \node{\txt{\includegraphics[scale=.2]{imagenes/tab122}\\ Valor minmax = 0\\ = max$\{-1, -1, 0\}$}}
     child { node [yshift=-1cm] {\txt{\includegraphics[scale=.2]{imagenes/tab1222}\\ Valor minmax = $-1$\\ = min$\{-1, 0, 0\}$}} 
@@ -80,14 +81,27 @@ Como front-end, se impementó una página web usando la librería Dash de python
 	;
 \end{tikzpicture}
 } % end scalebox
+\end{center}
+\caption{Árbol de decisión minmax. El jugador de las $X$ busca maximizar el valor de las opciones a su disposición. El jugador de las $O$ busca minimizar dicho valor. Por ejemplo, el nodo superior corresponde a un estado en donde juegan las $X$, quien debe responder con la opción de la derecha, la cual maximiza los valores \texttt{minmax}.}\label{fig:arbol_minmax}
+\end{figure}
 
 
-POR QUÉ ESTE AGENTE NO PUEDE SER DERROTADO???
+\section{Resultados}
+
+\noindent El programa de agente se implementó para jugar con las $O$, de tal manera que cuando el jugador humano, con las $X$, hace una jugada, el computador corre el algoritmo \texttt{minmax} sobre el tablero resultante. Al comienzo del juego existen muchas opciónes, por lo que el computador debe generar un árbol relativamente grande y se debe esperar algún tiempo para obtener la respuesta de las $O$s. No obstante, las siguientes jugadas se obtienen muchísimo más rápido.
+
+Dado que el agente genera el árbol de estados completo, previendo todos los caminos posibles, sus acciones son óptimas. Si el humano no juega bien, el computador sabrá encontrar cuál jugada lleva a la victoria. El mejor jugador humano encontrará la jugada óptima, la cual ya ha sido prevista por el computador; en este caso el humano no podrá obtener más que un empate contra el computador.
+
 
 \section{Discusión}
 
+\noindent El algoritmo que implementa el programa de agente es muy poderoso, permitiendo que el agente nunca pierda y logre ganar sin piedad ante un jugador humano ingenuo. No obstante, la creación del árbol completo de decisión es un método muy ineficiente para obtener la primera jugada por parte de las $O$, por lo que se buscará la creación de una tabla de decisión que pueda guardarse en un archivo, para ser cargada en memoria al comenzar el juego. También falta incorporar la posibilidad de que el computador juege con las $X$.
+
 \section{Conclusiones}
 
-REFERENCIAS
+\noindent Se implementó de forma satisfactoria un programa de agente para el juego del triqui que es imbatible. A pesar de algunos procesos ineficientes, un jugador humano puede disfrutar de una partida de triqui contra un adversario temible.
+
+\bibliographystyle{IEEEtranN}
+\bibliography{biblio}
 
 \end{document}

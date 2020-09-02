@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2020.4.28)  11 AUG 2020 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2020.4.28)  31 AUG 2020 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,39 +564,46 @@ Xy-pic pdf driver: `line' extension support
 (/usr/local/texlive/2018basic/texmf-dist/tex/generic/xypic/xypdf-li.tex loaded)
 Xy-pic pdf driver: `rotate' extension support
 (/usr/local/texlive/2018basic/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded)
-loaded)) (./reporte_triqui.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
+loaded)) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count132
+)
+(./reporte_triqui.aux
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 )
 \openout1 = `reporte_triqui.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
 
 (/usr/local/texlive/2018basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
+\scratchcounter=\count133
 \scratchdimen=\dimen195
 \scratchbox=\box43
-\nofMPsegments=\count133
-\nofMParguments=\count134
+\nofMPsegments=\count134
+\nofMParguments=\count135
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count135
+\MPscratchCnt=\count136
 \MPscratchDim=\dimen196
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
 \everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2018basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -649,36 +656,43 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
 (/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
 (/usr/local/texlive/2018basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.43799pt on input line 15.
+Package xypdf Info: Line width: 0.43799pt on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
+
+(/usr/local/texlive/2018basic/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 <imagenes/triqui1.png, id=4, 350.30875pt x 229.85875pt>
 File: imagenes/triqui1.png Graphic file (type png)
 <use imagenes/triqui1.png>
-Package pdftex.def Info: imagenes/triqui1.png  used on input line 27.
+Package pdftex.def Info: imagenes/triqui1.png  used on input line 28.
 (pdftex.def)             Requested size: 70.0605pt x 45.97093pt.
 <imagenes/triqui2.png, id=6, 351.3125pt x 229.85875pt>
 File: imagenes/triqui2.png Graphic file (type png)
 <use imagenes/triqui2.png>
-Package pdftex.def Info: imagenes/triqui2.png  used on input line 28.
+Package pdftex.def Info: imagenes/triqui2.png  used on input line 29.
 (pdftex.def)             Requested size: 70.26125pt x 45.97093pt.
 <imagenes/triqui3.png, id=7, 350.30875pt x 228.855pt>
 File: imagenes/triqui3.png Graphic file (type png)
 <use imagenes/triqui3.png>
-Package pdftex.def Info: imagenes/triqui3.png  used on input line 29.
+Package pdftex.def Info: imagenes/triqui3.png  used on input line 30.
 (pdftex.def)             Requested size: 70.0605pt x 45.77019pt.
 <imagenes/triqui4.png, id=8, 350.30875pt x 230.8625pt>
 File: imagenes/triqui4.png Graphic file (type png)
 <use imagenes/triqui4.png>
-Package pdftex.def Info: imagenes/triqui4.png  used on input line 30.
+Package pdftex.def Info: imagenes/triqui4.png  used on input line 31.
 (pdftex.def)             Requested size: 70.0605pt x 46.17168pt.
  [1
 
@@ -688,69 +702,63 @@ enes/triqui4.png>]
 <imagenes/busqueda-minmax.png, id=25, 497.86pt x 350.30875pt>
 File: imagenes/busqueda-minmax.png Graphic file (type png)
 <use imagenes/busqueda-minmax.png>
-Package pdftex.def Info: imagenes/busqueda-minmax.png  used on input line 54.
-(pdftex.def)             Requested size: 248.92938pt x 175.15395pt.
- [2]
-<imagenes/tab122.png, id=32, 347.2975pt x 227.85126pt>
+Package pdftex.def Info: imagenes/busqueda-minmax.png  used on input line 55.
+(pdftex.def)             Requested size: 199.14047pt x 140.12102pt.
+<imagenes/tab122.png, id=26, 347.2975pt x 227.85126pt>
 File: imagenes/tab122.png Graphic file (type png)
 <use imagenes/tab122.png>
-Package pdftex.def Info: imagenes/tab122.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab122.png  used on input line 83.
 (pdftex.def)             Requested size: 69.45827pt x 45.56944pt.
-<imagenes/tab1222.png, id=33, 347.2975pt x 225.84375pt>
+<imagenes/tab1222.png, id=27, 347.2975pt x 225.84375pt>
 File: imagenes/tab1222.png Graphic file (type png)
 <use imagenes/tab1222.png>
-Package pdftex.def Info: imagenes/tab1222.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab1222.png  used on input line 83.
 (pdftex.def)             Requested size: 69.45827pt x 45.16794pt.
-<imagenes/tab12221.png, id=34, 349.305pt x 230.8625pt>
+<imagenes/tab12221.png, id=28, 349.305pt x 230.8625pt>
 File: imagenes/tab12221.png Graphic file (type png)
 <use imagenes/tab12221.png>
-Package pdftex.def Info: imagenes/tab12221.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab12221.png  used on input line 83.
 (pdftex.def)             Requested size: 69.85976pt x 46.17168pt.
-<imagenes/tab1221.png, id=35, 352.31625pt x 230.8625pt>
+<imagenes/tab1221.png, id=29, 352.31625pt x 230.8625pt>
 File: imagenes/tab1221.png Graphic file (type png)
 <use imagenes/tab1221.png>
-Package pdftex.def Info: imagenes/tab1221.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab1221.png  used on input line 83.
 (pdftex.def)             Requested size: 70.46199pt x 46.17168pt.
-<imagenes/tab12211.png, id=36, 348.30125pt x 230.8625pt>
+<imagenes/tab12211.png, id=30, 348.30125pt x 230.8625pt>
 File: imagenes/tab12211.png Graphic file (type png)
 <use imagenes/tab12211.png>
-Package pdftex.def Info: imagenes/tab12211.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab12211.png  used on input line 83.
 (pdftex.def)             Requested size: 69.65901pt x 46.17168pt.
-<imagenes/tab122111.png, id=37, 349.305pt x 233.87375pt>
+<imagenes/tab122111.png, id=31, 349.305pt x 233.87375pt>
 File: imagenes/tab122111.png Graphic file (type png)
 <use imagenes/tab122111.png>
-Package pdftex.def Info: imagenes/tab122111.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab122111.png  used on input line 83.
 (pdftex.def)             Requested size: 69.85976pt x 46.77391pt.
-<imagenes/tab12212.png, id=38, 347.2975pt x 226.8475pt>
+<imagenes/tab12212.png, id=32, 347.2975pt x 226.8475pt>
 File: imagenes/tab12212.png Graphic file (type png)
 <use imagenes/tab12212.png>
-Package pdftex.def Info: imagenes/tab12212.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab12212.png  used on input line 83.
 (pdftex.def)             Requested size: 69.45827pt x 45.36868pt.
-<imagenes/tab122121.png, id=39, 350.30875pt x 228.855pt>
+<imagenes/tab122121.png, id=33, 350.30875pt x 228.855pt>
 File: imagenes/tab122121.png Graphic file (type png)
 <use imagenes/tab122121.png>
-Package pdftex.def Info: imagenes/tab122121.png  used on input line 82.
+Package pdftex.def Info: imagenes/tab122121.png  used on input line 83.
 (pdftex.def)             Requested size: 70.0605pt x 45.77019pt.
-
-Overfull \hbox (105.95784pt too wide) in paragraph at lines 63--83
- [] 
- []
-
-[3 <./imagenes/busqueda-minmax.png>] [4 <./imagenes/tab122.png> <./imagenes/tab
-1222.png> <./imagenes/tab12221.png> <./imagenes/tab1221.png> <./imagenes/tab122
-11.png> <./imagenes/tab122111.png> <./imagenes/tab12212.png> <./imagenes/tab122
-121.png>] (./reporte_triqui.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
+ [2] [3 <./imagenes/busqueda-minmax.png>] [4 <./imagenes/tab122.png> <./imagene
+s/tab1222.png> <./imagenes/tab12221.png> <./imagenes/tab1221.png> <./imagenes/t
+ab12211.png> <./imagenes/tab122111.png> <./imagenes/tab12212.png> <./imagenes/t
+ab122121.png>] (./reporte_triqui.bbl) [5] (./reporte_triqui.aux
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 15930 strings out of 494091
- 293004 string characters out of 6163523
- 382663 words of memory out of 5000000
- 19263 multiletter control sequences out of 15000+600000
+ 16287 strings out of 494091
+ 297451 string characters out of 6163523
+ 392510 words of memory out of 5000000
+ 19610 multiletter control sequences out of 15000+600000
  13309 words of font info for 54 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,21n,54p,3225b,1295s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,23n,54p,3253b,1442s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public/amsfonts
@@ -759,14 +767,13 @@ fonts/cm/cmmi10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018basic/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on reporte_triqui.pdf (4 pages, 251755 bytes).
+e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on reporte_triqui.pdf (5 pages, 249322 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
