@@ -509,18 +509,20 @@ class lp_query:
                     self.base_conocimiento['datos'] = [cuerpo]
         self.cods = cods
 
-    def visualizar(self):
-        print("Datos:")
-        for l in self.base_conocimiento['datos']:
-            self.cods.imprime_formula(l)
-            print('')
-        print("\nReglas:")
-        for k in self.base_conocimiento['reglas'].keys():
-            for c in self.base_conocimiento['reglas'][k]:
-                self.cods.imprime_formula(c)
-                print(">", end="")
-                self.cods.imprime_formula(k)
-                print(" ")
+    def visualizar(self, parte='todo'):
+        if (parte=='todo') or (parte=='datos'):
+            print("Datos:")
+            for l in self.base_conocimiento['datos']:
+                self.cods.imprime_formula(l)
+                print('')
+        if (parte=='todo') or (parte=='reglas'):
+            print("\nReglas:")
+            for k in self.base_conocimiento['reglas'].keys():
+                for c in self.base_conocimiento['reglas'][k]:
+                    self.cods.imprime_formula(c)
+                    print(">", end="")
+                    self.cods.imprime_formula(k)
+                    print(" ")
 
     def reglas_aplicables(self, head):
         # Devuelve una lista de cláusulas de Horn cuya cabeza
